@@ -3,7 +3,7 @@ package Perceptron;
 /**
  * Created by Victor on 05/01/2018.
  */
-public class Perceptron {
+public class Perceptron{
 
     private Neurona neuronas[];
     private double a;
@@ -12,7 +12,11 @@ public class Perceptron {
     private double[] pesos;
     private double[] tablaAprendizaje;
 
-    public Perceptron(int numNeuronas, double[][] entradas){
+    private Capa capas;
+
+
+
+    /*public Perceptron(int numNeuronas, double[][] entradas){
         this.entradas = entradas;
         neuronas = new Neurona[numNeuronas];
     }
@@ -67,6 +71,6 @@ public class Perceptron {
     public double salida(double[] entradas){
 
        return new Neurona(entradas, pesos).salida();
-    }
+    }*/
 
 }
