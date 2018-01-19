@@ -1,4 +1,4 @@
-package Perceptron;
+package RedesNeuronales;
 
 /**
  * Created by Victor on 05/01/2018.

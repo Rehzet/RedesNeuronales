@@ -1,19 +1,20 @@
-package Perceptron;
+package RedesNeuronales;
 
 import java.util.ArrayList;
 
 public class Capa extends ArrayList{
 
     private int funcionActivacion;
+    private int numNeuronas;
+
     private ArrayList<Neurona> neuronas;
 
-    public Capa(int funcionActivacion){
+    public Capa(int numNeuronas, int funcionActivacion){
         neuronas = new ArrayList<>();
         this.funcionActivacion = funcionActivacion;
+        this.numNeuronas = numNeuronas;
     }
 
-    public void addNeurona(double[] entradas, double[] pesos){
-        neuronas.add(new Neurona(entradas, pesos, funcionActivacion));
-    }
+
 
 }

@@ -1,4 +1,6 @@
-package Perceptron;
+import RedesNeuronales.Capa;
+import RedesNeuronales.FuncionActivacion;
+import RedesNeuronales.Neurona;
 
 /**
  * Created by Victor on 05/01/2018.
@@ -16,12 +18,12 @@ public class Perceptron{
 
 
 
-    /*public Perceptron(int numNeuronas, double[][] entradas){
+    public Perceptron(int numNeuronas, double[][] entradas){
         this.entradas = entradas;
         neuronas = new Neurona[numNeuronas];
     }
 
-    public double[] entrenar(double tasaAprendizaje, double[] pesosIniciales,  double[]tablaAprendizaje, int epoch){
+    public double[] entrenar(double tasaAprendizaje, double[] pesosIniciales,  double[]tablaAprendizaje, int epoch, int funcionActivacion){
 
         this.tablaAprendizaje = tablaAprendizaje;
         a = tasaAprendizaje;
@@ -31,7 +33,7 @@ public class Perceptron{
         double[] incW = new double[entradas[i].length];
         pesos = pesosIniciales;
         do {
-            neuronas[0] = new Neurona(entradas[i], pesos);
+            neuronas[0] = new Neurona(entradas[i], pesos, funcionActivacion);
 
             System.out.print("Entradas: (" );
             for (int j = 0; j < entradas[i].length; j++) {
@@ -39,7 +41,14 @@ public class Perceptron{
             }
             System.out.print(")");
 
+            System.out.print("\tPesos: (" );
+            for (int j = 0; j < pesos.length; j++) {
+                System.out.print(pesos[j] + ", ");
+            }
+            System.out.print(")");
+
             System.out.print("\tSalida: " + neuronas[0].salida());
+
             System.out.print("\t AW: (");
             for (int j = 0; j < incW.length; j++) {
                 incW[j] = a * entradas[i][j] * (tablaAprendizaje[i] - neuronas[0].salida());
@@ -71,6 +80,6 @@ public class Perceptron{
     public double salida(double[] entradas){
 
        return new Neurona(entradas, pesos).salida();
-    }*/
+    }
 
 }
